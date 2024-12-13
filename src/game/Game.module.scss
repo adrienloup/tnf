@@ -1,0 +1,36 @@
+.title1 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.title2 {
+  font-size: 12px;
+  // letter-spacing: 0.8px;
+  // text-transform: uppercase;
+  font-weight: 300;
+}
+
+.count {
+  // font-family: var(--font-bold);
+  font-size: 22px;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.article {
+  flex: 1;
+
+  .inner {
+    position: sticky;
+    top: 0;
+    left: 0;
+    // background-color: red;
+  }
+}
+
+.sidebar {
+  background-color: var(--color-neutral-2);
+  width: 30rem;
+}
