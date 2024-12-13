@@ -33,7 +33,7 @@ export default defineConfig({
             sizes: "512x512",
           },
         ],
-        start_url: "/tnf/",
+        start_url: "/tnf",
         background_color: "#000",
         display: "standalone",
         theme_color: "#fff",
