@@ -19,7 +19,7 @@ const merge = (translations: Translations[]): Translations =>
         ...acc,
         [key]: acc[key] ? { ...acc[key], ...translation } : translation,
       }),
-      {} as Translations
+      {} as Translations,
     );
 
 export const toTranslation = (...translations: Translations[]): Resource =>
@@ -30,5 +30,5 @@ export const toTranslation = (...translations: Translations[]): Resource =>
         ...acc,
         [current[0]]: current[1],
       }),
-      {}
+      {},
     );

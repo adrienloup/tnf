@@ -1,7 +1,7 @@
 .loader {
   background: linear-gradient(var(--color-neutral-4) 0 0) 0/0% no-repeat
     var(--color-neutral-2);
-  animation: Progress 2s infinite linear;
+  animation: Progress var(--loader-duration) infinite linear;
 }
 
 .small {

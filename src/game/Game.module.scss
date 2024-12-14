@@ -27,3 +27,9 @@ $tablet-landscape: 1024px;
 .card {
   background-color: red;
 }
+
+.loader {
+  margin: var(--spacing-m) auto;
+  background: linear-gradient(var(--color-neutral-4) 0 0) 0/0% no-repeat
+    var(--color-neutral-1);
+}

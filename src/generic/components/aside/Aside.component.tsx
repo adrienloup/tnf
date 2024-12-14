@@ -1,12 +1,10 @@
-import { LoaderComponent } from "@/src/generic/components/loader/Loader.component";
+import { Aside } from "@/src/generic/components/aside/Aside.type";
 import styles from "./Aside.module.scss";
 
-export const AsideComponent = () => {
+export const AsideComponent = ({ children }: Aside) => {
   return (
     <aside className={styles.aside} role="aside">
-      <div className={styles.inner}>
-        <LoaderComponent className={styles.loader} />
-      </div>
+      {children}
     </aside>
   );
 };
