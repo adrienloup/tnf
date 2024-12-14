@@ -9,7 +9,7 @@ export function LanguageProvider({ children }: { children: Children }) {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useLocalStorage<Language>(
     "_tnf_1mm2_3_language",
-    "en"
+    "en",
   );
 
   useEffect(() => {

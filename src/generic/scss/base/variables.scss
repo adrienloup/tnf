@@ -9,6 +9,11 @@
   --font-size-s: 0.625rem; /* 10px */
 }
 
+@mixin font-weight {
+  --font-weight-m: 600;
+  --font-weight-s: 300;
+}
+
 @mixin color {
   --color-neutral-1: #fff;
   --color-neutral-2: #f0f0f0;
@@ -28,6 +33,7 @@
 :root {
   @include font();
   @include font-size();
+  @include font-weight();
   @include color();
   @include spacing();
   @include easing();

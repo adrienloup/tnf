@@ -10,12 +10,12 @@ createRoot(document.getElementById("_tnf_1mm2_3")!).render(
     <Provider>
       <App />
     </Provider>
-  </StrictMode>
+  </StrictMode>,
 );
 
 console.log(
   `%c[tnf]%c${version}%c@jff`,
   "padding: 4px 3px 3px; background: #000; font-weight: bold; color: #fff;",
   "padding: 4px 3px 3px; background: #fff; font-weight: bold; color: #000;",
-  "padding: 4px 3px 3px; background: #000; font-weight: bold; color: #fff;"
+  "padding: 4px 3px 3px; background: #000; font-weight: bold; color: #fff;",
 );
