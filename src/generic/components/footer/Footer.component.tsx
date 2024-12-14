@@ -1,6 +1,6 @@
 import { version } from "@/package.json";
 import { useLanguage } from "@/src/generic/language/useLanguage";
-import styles from "@/src/generic/components/footer/Footer.module.scss";
+import styles from "./Footer.module.scss";
 
 export const FooterComponent = () => {
   const { language, setLanguage } = useLanguage();

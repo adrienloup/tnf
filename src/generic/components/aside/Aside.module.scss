@@ -1,10 +1,22 @@
+$tablet-landscape: 1024px;
+
 .aside {
-  width: 30rem;
+  width: 25rem;
   background-color: var(--color-neutral-2);
+
+  @media (max-width: $tablet-landscape) {
+    width: 20rem;
+  }
 }
 
 .inner {
   position: sticky;
   top: 0;
   left: 0;
+}
+
+.loader {
+  margin: var(--spacing-m) auto;
+  background: linear-gradient(var(--color-neutral-4) 0 0) 0/0% no-repeat
+    var(--color-neutral-1);
 }

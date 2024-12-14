@@ -1,5 +1,5 @@
 import { Article } from "@/src/generic/components/article/Article.type";
-import styles from "@/src/generic/components/article/Article.module.scss";
+import styles from "./Article.module.scss";
 
 export const ArticleComponent = ({ children }: Article) => {
   return (
