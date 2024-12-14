@@ -1,10 +1,10 @@
-$desktop: 1280px;
+$tablet-landscape: 1024px;
 
 .aside {
   width: 25rem;
   background-color: var(--color-neutral-2);
 
-  @media (max-width: $desktop) {
+  @media (max-width: $tablet-landscape) {
     width: 20rem;
   }
 }

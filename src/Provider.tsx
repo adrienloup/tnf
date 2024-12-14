@@ -7,7 +7,7 @@ import {
 
 import { Children } from "@/src/generic/types/Children.type";
 import { LanguageProvider } from "@/src/generic/language/Language.provider";
-import { NotificationProvider } from "@/src/game/components/notification/Notification.provider";
+import { GiftProvider } from "@/src/game/components/gift/Gift.provider";
 
 type ProvidersType = [
   ComponentType<{ children: Children }>,
@@ -22,8 +22,8 @@ const combineProviders = (providers: ProvidersType) =>
           <Provider {...props}>{children}</Provider>
         </AccumulatedProviders>
       ),
-    ({ children }: { children: Children }) => <>{children}</>,
+    ({ children }: { children: Children }) => <>{children}</>
   );
 
 export const Provider: FunctionComponent<{ children: Children }> =
-  combineProviders([[LanguageProvider], [NotificationProvider]]);
+  combineProviders([[LanguageProvider], [GiftProvider]]);

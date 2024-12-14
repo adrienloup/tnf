@@ -1,0 +1,29 @@
+$desktop: 1280px;
+$tablet-landscape: 1024px;
+
+.dashboard {
+  // background-color: red;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+  padding: var(--spacing-m);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+  flex: 1;
+
+  @media (max-width: $desktop) {
+    flex: initial;
+    width: calc(50% - var(--spacing-s));
+  }
+
+  @media (max-width: $tablet-landscape) {
+    width: 100%;
+  }
+}

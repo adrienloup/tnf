@@ -4,8 +4,8 @@
 }
 
 @mixin font-size {
-  --font-size-l: 16px;
-  --font-size-m: 14px;
+  --font-size-l: 20px;
+  --font-size-m: 16px;
   --font-size-s: 12px;
 }
 
@@ -19,6 +19,8 @@
   --color-neutral-2: #f0f0f0;
   --color-neutral-3: #555;
   --color-neutral-4: #000;
+  --color-solid-1: #05ff00;
+  --color-solid-2: #ff0100;
 }
 
 @mixin spacing {

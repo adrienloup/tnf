@@ -10,7 +10,7 @@ export const FooterComponent = () => {
   return (
     <footer className={styles.footer} role="contentinfo">
       <button onClick={toggleLocal}>{language === "fr" ? "EN" : "FR"}</button>
-      tnf v{version}
+      <div className={styles.version}>tnf v{version}</div>
     </footer>
   );
 };
