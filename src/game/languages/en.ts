@@ -1,7 +1,7 @@
-import { Translation } from "@/src/generic/language/Translations";
+import { Translation } from "@/src/generic/language/Translations.type";
 
 export const en: Translation = {
   game: {
-    title: "tata en",
+    title: "tata en aaaaaa",
   },
 };

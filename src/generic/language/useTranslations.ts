@@ -1,7 +1,5 @@
 import { Resource, ResourceKey, ResourceLanguage } from "i18next";
-
-export type Translation = Record<string, unknown>;
-export type Translations = Record<string, Translation>;
+import { Translations } from "./Translations.type";
 
 const languages = ([key, value]: [string, ResourceKey]): [
   string,

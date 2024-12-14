@@ -1,4 +1,4 @@
-import { Translation } from "@/src/generic/language/Translations";
+import { Translation } from "@/src/generic/language/Translations.type";
 
 export const en: Translation = {
   setup: {
