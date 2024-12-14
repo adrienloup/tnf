@@ -1,18 +1,17 @@
 import { useTranslation } from "react-i18next";
 import { PageComponent } from "@/src/generic/components/page/Page.component";
-import styles from "@/src/game/Game.module.scss";
+import { ArticleComponent } from "@/src/generic/components/article/Article.component";
+import { AsideComponent } from "../generic/components/aside/Aside.component";
 
 function GamePage() {
   const { t } = useTranslation();
 
   return (
     <PageComponent>
-      <div className={styles.article}>
-        <div className={styles.title1}>{t("page.game.title")}</div>
-      </div>
-      <div className={styles.sidebar}>
-        <div className={styles.inner}>sidebar</div>
-      </div>
+      <ArticleComponent>
+        <h1>{t("page.game.title")}</h1>
+      </ArticleComponent>
+      <AsideComponent />
     </PageComponent>
   );
 }
