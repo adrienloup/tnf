@@ -1,11 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { version } from "@/package.json";
+import { Provider } from "@/src/Provider";
 import App from "@/src/App";
+import "@/src/generic/language";
 
 createRoot(document.getElementById("_tnf_1mm2_3")!).render(
   <StrictMode>
-    <App />
+    <Provider>
+      <App />
+    </Provider>
   </StrictMode>
 );
 
