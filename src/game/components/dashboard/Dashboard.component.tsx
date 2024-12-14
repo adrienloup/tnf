@@ -3,19 +3,21 @@ import { useGift } from "@/src/game/components/gift/useGift";
 import { ManufacturingComponent } from "@/src/game/components/manufacturing/Manufacturing.component";
 // import { BusinessComponent } from "@/src/game/components/business/Business.component";
 import styles from "./Dashboard.module.scss";
+import { useEffect } from "react";
 
 function DashboardComponent() {
   const { t } = useTranslation();
   const { addGift } = useGift();
 
-  const onClick = () =>
-    addGift({
-      id: "1",
-      title: t("game.gift.gift1.title"),
-      text: t("game.gift.gift1.text"),
-    });
+  const onClick = () => addGift({ id: "gift1" });
 
-  const onClick2 = () => addGift({ id: "2", title: "222222", text: "uuuuu" });
+  const onClick2 = () => addGift({ id: "gift2" });
+
+  const onClick3 = () => addGift({ id: "gift3" });
+
+  useEffect(() => {
+    addGift({ id: "gift1" });
+  }, []);
 
   return (
     <div className={styles.dashboard}>
@@ -23,6 +25,7 @@ function DashboardComponent() {
       {t("game.title")}
       <button onClick={onClick}>add notification1</button>
       <button onClick={onClick2}>add notification2</button>
+      <button onClick={onClick3}>add notification3</button>
       <div className={styles.columns}>
         <div className={styles.column}>
           <ManufacturingComponent />

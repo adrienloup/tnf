@@ -1,8 +1,8 @@
 import { classNames } from "@/src/generic/utils/classNames";
 import { Gift } from "@/src/game/components/gift/Gift.type";
 import { ButtonComponent } from "@/src/generic/components/button/Button.component";
-import styles from "./Gift.module.scss";
 import { IconComponent } from "@/src/generic/components/icon/Icon";
+import styles from "./Gift.module.scss";
 
 export const GiftComponent = ({
   title,
