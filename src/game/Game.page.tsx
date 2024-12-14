@@ -7,11 +7,11 @@ import { AsideComponent } from "@/src/generic/components/aside/Aside.component";
 import styles from "./Game.module.scss";
 
 const DashboardComponent = lazy(() =>
-  fallback(import("@/src/game/components/dashboard/Dashboard.component"), 6e2)
+  fallback(import("@/src/game/components/dashboard/Dashboard.component"), 6e2),
 );
 
 const GiftsComponent = lazy(() =>
-  fallback(import("@/src/game/components/gifts/Gifts.component"), 4e2)
+  fallback(import("@/src/game/components/gifts/Gifts.component"), 4e2),
 );
 
 function GamePage() {

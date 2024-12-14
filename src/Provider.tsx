@@ -22,7 +22,7 @@ const combineProviders = (providers: ProvidersType) =>
           <Provider {...props}>{children}</Provider>
         </AccumulatedProviders>
       ),
-    ({ children }: { children: Children }) => <>{children}</>
+    ({ children }: { children: Children }) => <>{children}</>,
   );
 
 export const Provider: FunctionComponent<{ children: Children }> =
