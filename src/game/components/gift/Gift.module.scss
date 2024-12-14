@@ -1,7 +1,7 @@
 .gift {
   position: relative;
   padding: var(--spacing-m) var(--spacing-l) var(--spacing-m) var(--spacing-m);
-  background-color: var(--color-neutral-1);
+  background-color: var(--color-1);
 
   & + & {
     margin-top: var(--spacing-s);
@@ -30,17 +30,16 @@
   height: 100%;
   background-color: transparent;
   font-size: var(--font-size-m);
-  color: var(--color-neutral-4);
+  color: var(--color-4);
 
   &:hover {
-    background-color: var(--color-neutral-4);
-    color: var(--color-neutral-1);
+    background-color: var(--color-4);
+    color: var(--color-1);
   }
 }
 
 @keyframes Appear {
   0% {
-    opacity: 0;
     background-color: var(--color-solid-1);
   }
 }

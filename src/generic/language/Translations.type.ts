@@ -1,2 +1,3 @@
-export type Translation = Record<string, unknown>;
+import { Translation } from "@/src/generic/language/Translation.type";
+
 export type Translations = Record<string, Translation>;

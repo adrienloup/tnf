@@ -11,11 +11,11 @@
   a {
     padding: var(--spacing-s) var(--spacing-m);
     text-decoration: none;
-    color: var(--color-neutral-4);
+    color: var(--color-4);
 
     &:hover {
-      background-color: var(--color-neutral-4);
-      color: var(--color-neutral-1);
+      background-color: var(--color-4);
+      color: var(--color-1);
     }
 
     &:focus-visible {

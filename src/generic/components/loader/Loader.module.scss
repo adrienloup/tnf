@@ -1,17 +1,16 @@
 .loader {
-  background: linear-gradient(var(--color-neutral-4) 0 0) 0/0% no-repeat
-    var(--color-neutral-2);
+  background: linear-gradient(var(--color-4) 0 0) 0/0% no-repeat var(--color-2);
   animation: Progress var(--loader-duration) infinite linear;
 }
 
 .small {
-  width: 40px;
-  height: 4px;
+  width: 60px;
+  height: 6px;
 }
 
 .medium {
-  width: 60px;
-  height: 6px;
+  width: 80px;
+  height: 8px;
 }
 
 .larg {

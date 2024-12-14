@@ -1,5 +1,12 @@
-.loader {
+.dashboardloader,
+.giftsloader {
   margin: var(--spacing-m) auto;
-  background: linear-gradient(var(--color-neutral-4) 0 0) 0/0% no-repeat
-    var(--color-neutral-1);
+}
+
+.dashboardloader {
+  background: linear-gradient(var(--color-4) 0 0) 0/0% no-repeat var(--color-2);
+}
+
+.giftsloader {
+  background: linear-gradient(var(--color-4) 0 0) 0/0% no-repeat var(--color-1);
 }

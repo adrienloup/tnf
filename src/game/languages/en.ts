@@ -1,8 +1,8 @@
-import { Translation } from "@/src/generic/language/Translations.type";
+import { Translation } from "@/src/generic/language/Translation.type";
 
 export const en: Translation = {
   game: {
-    title: "@TODO EN",
+    title: "Nails:",
     gift1: {
       title: "Welcome!",
       text: "Builds nails, then sell them to generate income and acquire more steel.",

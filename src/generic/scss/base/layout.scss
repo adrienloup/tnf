@@ -1,16 +1,18 @@
 :root {
-  background-color: var(--color-neutral-2);
   font-family: var(--font-text);
   line-height: 1;
-  letter-spacing: 0.05rem;
   font-stretch: normal;
   font-weight: var(--font-weight-s);
   font-size: var(--font-size-s);
-  color: var(--color-neutral-4);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-2);
+  color: var(--color-4);
 }
 
 * {

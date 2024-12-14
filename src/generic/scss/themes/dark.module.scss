@@ -1,0 +1,18 @@
+@mixin if-dark {
+  ._dark_1mm2_3 {
+    @content;
+  }
+}
+
+@mixin dark {
+  --color-1: var(--color-neutral-4);
+  --color-2: var(--color-neutral-5);
+  --color-3: var(--color-neutral-3);
+  --color-4: var(--color-neutral-1);
+}
+
+:root {
+  @include if-dark {
+    @include dark();
+  }
+}

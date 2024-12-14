@@ -1,9 +1,9 @@
 .footer {
   display: flex;
-  justify-content: space-between;
-  background-color: var(--color-neutral-2);
+  background-color: var(--color-2);
 }
 
 .version {
+  margin-left: auto;
   padding: var(--spacing-s);
 }

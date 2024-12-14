@@ -20,16 +20,20 @@ function GamePage() {
       <ArticleComponent>
         <Suspense
           fallback={
-            <LoaderComponent className={styles.loader} duration="6e2" />
+            <LoaderComponent
+              className={styles.dashboardloader}
+              duration="6e2"
+            />
           }
         >
           <DashboardComponent />
+          <div style={{ height: "1000px" }}></div>
         </Suspense>
       </ArticleComponent>
       <AsideComponent>
         <Suspense
           fallback={
-            <LoaderComponent className={styles.loader} duration="4e2" />
+            <LoaderComponent className={styles.giftsloader} duration="4e2" />
           }
         >
           <GiftsComponent />

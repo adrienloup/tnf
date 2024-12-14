@@ -1,8 +1,8 @@
-import { Translation } from "@/src/generic/language/Translations.type";
+import { Translation } from "@/src/generic/language/Translation.type";
 
 export const fr: Translation = {
   game: {
-    title: "@TODO FR",
+    title: "Clous :",
     gift1: {
       title: "Bienvenue !",
       text: "Fabriquez des clous, puis vendez-les pour générer des revenus et acquérir davantage d'acier.",

@@ -2,14 +2,15 @@ $desktop: 1280px;
 $tablet-landscape: 1024px;
 
 .dashboard {
-  // background-color: red;
+  display: flex;
+  flex-direction: column;
 }
 
 .columns {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-m);
-  padding: var(--spacing-m);
+  padding: 0 var(--spacing-m) var(--spacing-m);
 }
 
 .column {
