@@ -6,7 +6,7 @@ function SetupPage() {
 
   return (
     <PageComponent>
-      <h1>{t("page.setup.title")}</h1>
+      <h1>{t("setup.title")}</h1>
     </PageComponent>
   );
 }
