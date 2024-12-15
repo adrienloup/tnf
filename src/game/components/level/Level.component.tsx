@@ -22,7 +22,7 @@ export const LevelComponent = () => {
       id: "notif1",
     });
 
-    if (total === 100) {
+    if (total >= 100) {
       setGame({
         funds,
         inventory,
@@ -39,7 +39,7 @@ export const LevelComponent = () => {
       });
     }
 
-    if (total === 10000) {
+    if (total >= 10000) {
       setGame({
         funds,
         inventory,
@@ -56,7 +56,7 @@ export const LevelComponent = () => {
       });
     }
 
-    if (total === 100000) {
+    if (total >= 100000) {
       setGame({
         funds,
         inventory,

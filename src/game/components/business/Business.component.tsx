@@ -46,16 +46,16 @@ export const BusinessComponent = () => {
 
   // Met à jour la demande en fonction du prix
   useEffect(() => {
-    const newDemand = Math.max(0, 100 - priceNail * 50);
+    const newDemand = Math.max(0, 100 - priceNail * 30);
     setPublicDemand(newDemand);
   }, [priceNail]);
 
+  // Ventes
   useEffect(() => {
     const interval = setInterval(() => {
-      const production = inventory;
       const adjustedDemand = publicDemand / 100; // Demande sous forme de facteur (0 à 1)
-      const potentialSales = production * adjustedDemand * 2; // 2 : Facteur pour augmenter la vitesse de ventes
-      const actualSales = Math.min(production, potentialSales); // Limité à l'inventaire
+      const potentialSales = inventory * adjustedDemand * 2; // Facteur pour augmenter la vitesse de ventes
+      const actualSales = Math.min(inventory, potentialSales); // Limité à l'inventaire
       setGame({
         funds: funds + actualSales * priceNail,
         inventory: inventory - actualSales,
@@ -66,7 +66,7 @@ export const BusinessComponent = () => {
         stock,
         total,
       });
-    }, 9e2);
+    }, 1e3);
 
     return () => clearInterval(interval);
   }, [inventory, funds, publicDemand, priceNail]);
@@ -76,16 +76,16 @@ export const BusinessComponent = () => {
       <h2>Business</h2>
       <p>Fonds disponibles : {funds.toFixed(2)} €</p>
       <p>Inventaire invendu : {inventory}</p>
-      <p>Public Demande : {publicDemand} %</p>
+      <p>Public Demande : {publicDemand.toFixed(2)} %</p>
       <div>
         <ButtonComponent className={styles.button} onClick={decreasePrice}>
-          Lower
+          Baisser le prix
         </ButtonComponent>
         <ButtonComponent className={styles.button} onClick={increasePrice}>
-          Raise
+          AUgmenter le prix
         </ButtonComponent>
       </div>
-      <p>Price per nail : {priceNail} €</p>
+      <p>Prix par clou : {priceNail.toFixed(2)} €</p>
     </CardComponent>
   );
 };

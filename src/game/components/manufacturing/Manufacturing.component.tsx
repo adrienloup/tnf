@@ -17,6 +17,7 @@ export const ManufacturingComponent = () => {
     total,
   } = useGame();
   const [steelPrice, setSteelPrice] = useState(10);
+  const [checked, setChecked] = useState(false);
   const rate = useRef(0);
 
   const makeNail = () => {
@@ -68,28 +69,27 @@ export const ManufacturingComponent = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (stock >= machines) {
-        const production = machines;
         setGame({
           funds,
-          inventory: inventory + production,
+          inventory: inventory + machines,
           level,
           machines,
           priceNail,
           priceMachine,
-          stock: stock - production,
-          total: total + production,
+          stock: stock - machines,
+          total: total + machines,
         });
         rate.current = machines;
       }
     }, 1e3);
     return () => clearInterval(interval);
-  }, [inventory, machines, stock, total]);
+  }, [inventory, machines, priceNail, stock, total]);
 
   // Prix de l'acier entre 0.5 et 10 €
   useEffect(() => {
     const interval = setInterval(() => {
       const newPrice = parseFloat(
-        (Math.random() * (10 - 0.5) + 0.5).toFixed(2),
+        (Math.random() * (10 - 0.5) + 0.5).toFixed(2)
       );
       setSteelPrice(newPrice);
     }, 5e3);
@@ -98,17 +98,19 @@ export const ManufacturingComponent = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      rate.current = 0;
+      rate.current = machines;
     }, 1e3);
     return () => clearInterval(interval);
   }, []);
 
-  // useEffect(() => {
-  //   if (!checked) return;
-  //   if (stock < 1) {
-  //     buySteel();
-  //   }
-  // }, [stock]);
+  // Achats automatique
+  useEffect(() => {
+    if (!checked) return;
+    console.log("ZZZZ");
+    if (stock <= 100) {
+      buySteel();
+    }
+  }, [stock]);
 
   return (
     <CardComponent>
@@ -127,14 +129,14 @@ export const ManufacturingComponent = () => {
         >
           Acheter acier
         </ButtonComponent>
-        {/* {level >= 3 ? (
+        {level >= 3 ? (
           <ButtonComponent
             className={styles.button}
             onClick={() => setChecked(!checked)}
           >
-            Auto
+            Auto {checked ? "ok" : "ko"}
           </ButtonComponent>
-        ) : null} */}
+        ) : null}
       </div>
       {level >= 2 ? (
         <>
@@ -146,7 +148,7 @@ export const ManufacturingComponent = () => {
           >
             Acheter machine
           </ButtonComponent>
-          <p>Prix par machine : {priceMachine} €</p>
+          <p>Prix par machine : {priceMachine.toFixed(2)} €</p>
         </>
       ) : null}
     </CardComponent>
