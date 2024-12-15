@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocalStorage } from "@/src/generic/hooks/useLocalStorage";
 import { Children } from "@/src/generic/types/Children.type";
-import { Language } from "@/src/generic/language/Language.type";
-import { LanguageContext } from "@/src/generic/language/Language.context";
+import { Language } from "@/src/generic/languages/Language.type";
+import { LanguageContext } from "@/src/generic/languages/Language.context";
 
 export function LanguageProvider({ children }: { children: Children }) {
   const { i18n } = useTranslation();

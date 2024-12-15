@@ -1,5 +1,6 @@
 $desktop: 1280px;
 $tablet-landscape: 1024px;
+$tablet-portrait: 768px;
 
 .dashboard {
   display: flex;
@@ -21,10 +22,15 @@ $tablet-landscape: 1024px;
 
   @media (max-width: $desktop) {
     flex: initial;
-    width: calc(50% - var(--spacing-s));
+    width: calc((100% / 3) - var(--spacing-s));
   }
 
   @media (max-width: $tablet-landscape) {
+    flex: initial;
+    width: calc(50% - var(--spacing-s));
+  }
+
+  @media (max-width: $tablet-portrait) {
     width: 100%;
   }
 }

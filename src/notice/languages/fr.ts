@@ -1,7 +1,7 @@
-import { Translation } from "@/src/generic/language/Translations.type";
+import { Translation } from "@/src/generic/languages/Translation.type";
 
 export const fr: Translation = {
-  setup: {
+  notice: {
     title: "Un clou. Deux clous. Trois clous...",
   },
 };

@@ -1,34 +1,41 @@
 @mixin font {
-  --font-text: "Neue-Helvetica", "Helvetica", "Arial", "sans-serif";
+  --font-regular: Regular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-bold: Bold, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-icon: "Icons", sans-serif;
 }
 
 @mixin font-size {
-  --font-size-l: 18px;
-  --font-size-m: 14px;
-  --font-size-s: 12px;
+  --font-size-l: 42px;
+  --font-size-m: 12px;
+  --font-size-s: 10px;
 }
 
 @mixin font-weight {
-  --font-weight-m: 600;
+  --font-weight-m: 700;
   --font-weight-s: 300;
+}
+
+@mixin line-height {
+  --line-height-l: 1.25;
+  --line-height-m: 1;
+  --line-height-s: 0.75;
 }
 
 @mixin color {
   --color-neutral-1: #fff;
   --color-neutral-2: #eee;
-  --color-neutral-3: #666;
+  --color-neutral-3: #707070;
   --color-neutral-4: #28292a;
   --color-neutral-5: #202124;
-  --color-neutral-6: #000;
+  --color-neutral-6: #000000dc;
   --color-solid-1: #05ff00;
   --color-solid-2: #ff0100;
 }
 
 @mixin spacing {
-  --spacing-l: 32px;
-  --spacing-m: 16px;
-  --spacing-s: 8px;
+  --spacing-l: 20px;
+  --spacing-m: 12px;
+  --spacing-s: 6px;
 }
 
 @mixin easing {
@@ -39,6 +46,7 @@
   @include font();
   @include font-size();
   @include font-weight();
+  @include line-height();
   @include color();
   @include spacing();
   @include easing();

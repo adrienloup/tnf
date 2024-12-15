@@ -1,19 +1,19 @@
 import { classNames } from "@/src/generic/utils/classNames";
-import { Gift } from "@/src/game/components/gift/Gift.type";
+import { Notif } from "@/src/game/components/notif/Notif.type";
 import { ButtonComponent } from "@/src/generic/components/button/Button.component";
 import { IconComponent } from "@/src/generic/components/icon/Icon";
-import styles from "./Gift.module.scss";
+import styles from "./Notif.module.scss";
 
-export const GiftComponent = ({
+export const NotifComponent = ({
   title,
   text,
-  isNew,
+  isActive,
   onClick,
   onAnimationEnd,
-}: Gift) => {
+}: Notif) => {
   return (
     <div
-      className={classNames([styles.gift, isNew ? styles.isNew : ""])}
+      className={classNames([styles.notif, isActive ? styles.isActive : ""])}
       onAnimationEnd={onAnimationEnd!}
     >
       <div className={styles.title}>{title}</div>

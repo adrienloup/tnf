@@ -1,5 +1,13 @@
+$tablet-portrait: 768px;
+
 .main {
-  display: flex;
   flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 25rem;
+  grid-template-rows: auto 1fr;
   background-color: var(--color-1);
+
+  @media (max-width: $tablet-portrait) {
+    grid-template-columns: 1fr 20rem;
+  }
 }

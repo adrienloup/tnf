@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { fallback } from "@/src/generic/utils/fallback";
+import { NavigationComponent } from "@/src/generic/components/navigation/Navigation.component";
 import { LoaderComponent } from "@/src/generic/components/loader/Loader.component";
 import { PageComponent } from "@/src/generic/components/page/Page.component";
 import { ArticleComponent } from "@/src/generic/components/article/Article.component";
@@ -10,33 +11,30 @@ const DashboardComponent = lazy(() =>
   fallback(import("@/src/game/components/dashboard/Dashboard.component"), 6e2),
 );
 
-const GiftsComponent = lazy(() =>
-  fallback(import("@/src/game/components/gifts/Gifts.component"), 4e2),
+const NotifsComponent = lazy(() =>
+  fallback(import("@/src/game/components/notifs/Notifs.component"), 4e2),
 );
 
 function GamePage() {
   return (
     <PageComponent>
+      <NavigationComponent />
       <ArticleComponent>
         <Suspense
           fallback={
-            <LoaderComponent
-              className={styles.dashboardloader}
-              duration="6e2"
-            />
+            <LoaderComponent className={styles.loader_gray} duration="6e2" />
           }
         >
           <DashboardComponent />
-          <div style={{ height: "1000px" }}></div>
         </Suspense>
       </ArticleComponent>
       <AsideComponent>
         <Suspense
           fallback={
-            <LoaderComponent className={styles.giftsloader} duration="4e2" />
+            <LoaderComponent className={styles.loader_white} duration="4e2" />
           }
         >
-          <GiftsComponent />
+          <NotifsComponent />
         </Suspense>
       </AsideComponent>
     </PageComponent>

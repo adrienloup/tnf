@@ -1,4 +1,4 @@
-.gift {
+.notif {
   position: relative;
   padding: var(--spacing-m) var(--spacing-l) var(--spacing-m) var(--spacing-m);
   background-color: var(--color-1);
@@ -8,7 +8,7 @@
   }
 }
 
-.isNew {
+.isActive {
   animation: Appear 0.75s var(--ease-in-out-quad);
 }
 
@@ -18,7 +18,8 @@
 }
 
 .text {
-  line-height: var(--spacing-m);
+  padding-right: var(--spacing-s);
+  line-height: var(--line-height-l);
 }
 
 .button {
@@ -26,9 +27,10 @@
   top: 0;
   right: 0;
   z-index: 2;
-  width: var(--spacing-l);
+  width: 30px;
   height: 100%;
   background-color: transparent;
+  border: none;
   font-size: var(--font-size-m);
   color: var(--color-4);
 

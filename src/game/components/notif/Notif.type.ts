@@ -1,8 +1,8 @@
-export type Gift = {
+export interface Notif {
   id: string;
-  title?: string;
+  isActive?: boolean;
   text?: string;
-  isNew?: boolean;
+  title?: string;
   onClick?: () => void;
   onAnimationEnd?: () => void;
-};
+}

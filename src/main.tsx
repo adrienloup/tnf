@@ -1,4 +1,4 @@
-import "@/src/generic/language/Language";
+import "@/src/generic/languages/Language";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { version } from "@/package.json";

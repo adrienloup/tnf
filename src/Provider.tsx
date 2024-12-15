@@ -6,9 +6,10 @@ import {
 } from "react";
 
 import { Children } from "@/src/generic/types/Children.type";
-import { LanguageProvider } from "@/src/generic/language/Language.provider";
+import { LanguageProvider } from "@/src/generic/languages/Language.provider";
 import { ThemeProvider } from "@/src/generic/theme/Theme.provider";
-import { GiftProvider } from "@/src/game/components/gift/Gift.provider";
+import { GameProvider } from "@/src/game/Game.provider";
+import { NotifProvider } from "@/src/game/components/notif/Notif.provider";
 
 type ProvidersType = [
   ComponentType<{ children: Children }>,
@@ -27,4 +28,9 @@ const combineProviders = (providers: ProvidersType) =>
   );
 
 export const Provider: FunctionComponent<{ children: Children }> =
-  combineProviders([[LanguageProvider], [ThemeProvider], [GiftProvider]]);
+  combineProviders([
+    [LanguageProvider],
+    [ThemeProvider],
+    [GameProvider],
+    [NotifProvider],
+  ]);

@@ -10,7 +10,7 @@ export default defineConfig({
     VitePWA({
       manifest: {
         short_name: "tnf",
-        name: "The Nails Factory",
+        name: "The Nail Factory",
         icons: [
           {
             src: "/tnf/tnf-192x192.svg",
@@ -38,7 +38,7 @@ export default defineConfig({
         display: "standalone",
         theme_color: "#fff",
         description:
-          "The Nails Factory is a recreation of Universal Paperclips a game based on the idea of artificial intelligence (AI) optimized for a single task.",
+          "The Nail Factory is a recreation of Universal Paperclips a game based on the idea of artificial intelligence (AI) optimized for a single task.",
       },
     }),
   ],

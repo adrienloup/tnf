@@ -9,7 +9,7 @@ export const NavigationComponent = () => {
           <Link to="/tnf">Game</Link>
         </li>
         <li>
-          <Link to="/tnf/setup">Setup</Link>
+          <Link to="/tnf/notice">Notice</Link>
         </li>
       </ul>
     </nav>

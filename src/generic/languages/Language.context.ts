@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { Language } from "@/src/generic/language/Language.type";
+import { Language } from "@/src/generic/languages/Language.type";
 
 export const LanguageContext = createContext<{
   language: Language;
