@@ -5,7 +5,16 @@ import { useNotifDispatch } from "@/src/game/components/notif/useNotif";
 export const LevelComponent = () => {
   const setGame = useGameDispatch();
   const setNotifs = useNotifDispatch();
-  const { funds, inventory, level, machines, price, stock, total } = useGame();
+  const {
+    funds,
+    inventory,
+    level,
+    machines,
+    priceNail,
+    priceMachine,
+    stock,
+    total,
+  } = useGame();
 
   useEffect(() => {
     setNotifs({
@@ -19,7 +28,8 @@ export const LevelComponent = () => {
         inventory,
         level: level + 1,
         machines,
-        price,
+        priceNail,
+        priceMachine,
         stock,
         total,
       });
@@ -35,7 +45,8 @@ export const LevelComponent = () => {
         inventory,
         level: level + 1,
         machines,
-        price,
+        priceNail,
+        priceMachine,
         stock,
         total,
       });
@@ -51,7 +62,8 @@ export const LevelComponent = () => {
         inventory,
         level: level + 1,
         machines,
-        price,
+        priceNail,
+        priceMachine,
         stock,
         total,
       });
